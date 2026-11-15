@@ -1,0 +1,12 @@
+m1 = int(input("Enter subject 1 marks: "))
+m2 = int(input("Enter subject 2 marks: "))
+m3 = int(input("Enter subject 3 marks: "))
+
+if m1 < 0 or m1 > 100 or m2 < 0 or m2 > 100 or m3 < 0 or m3 > 100:
+    print("Invalid Marks")
+
+elif m1 >= 35 and m2 >= 35 and m3 >= 35:
+    print("Student Passed")
+
+else:
+    print("Student Failed")

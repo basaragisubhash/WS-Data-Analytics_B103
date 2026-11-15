@@ -1,0 +1,14 @@
+username = input("Enter username: ")
+password = input("Enter password: ")
+
+correct_username = "admin"
+correct_password = "12345"
+
+if username == correct_username and password == correct_password:
+    print("Login Successful")
+
+elif username != correct_username:
+    print("Invalid Username")
+
+else:
+    print("Invalid Password")

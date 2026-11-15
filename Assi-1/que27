@@ -1,0 +1,8 @@
+age = int(input("Enter your age: "))
+eyesight = input("Is your eyesight normal? (yes/no): ")
+
+if age >= 18 and eyesight.lower() == "yes":
+    print("Eligible for Driving License")
+
+else:
+    print("Not Eligible for Driving License")
