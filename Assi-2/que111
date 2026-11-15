@@ -1,0 +1,18 @@
+def second_largest(lst):
+    largest = float('-inf')
+    second = float('-inf')
+
+    for i in lst:
+        if i > largest:
+            second = largest
+            largest = i
+
+        elif i > second and i != largest:
+            second = i
+
+    if second == float('-inf'):
+        return None
+
+    return second
+
+print(second_largest([10, 20, 40, 30, 50]))
