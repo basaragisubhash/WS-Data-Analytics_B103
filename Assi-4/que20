@@ -1,0 +1,39 @@
+
+marks = []
+
+for i in range(5):
+    m = float(input("Enter marks: "))
+    marks.append(m)
+
+total = 0
+
+for m in marks:
+    total = total + m
+
+percentage = total / 5
+
+print("Total Marks:", total)
+print("Percentage:", percentage, "%")
+
+if any(m < 35 for m in marks):
+    print("Result: Fail")
+
+elif percentage >= 90:
+    print("Grade: A+")
+
+elif percentage >= 75:
+    print("Grade: A")
+
+elif percentage >= 60:
+    print("Grade: B")
+
+elif percentage >= 35:
+    print("Grade: C")
+
+else:
+    print("Grade: F")
+
+if all(m >= 35 for m in marks):
+    print("Result: Pass")
+else:
+    print("Result: Fail")
