@@ -1,0 +1,19 @@
+income = float(input("Enter annual income: "))
+
+if income < 0:
+    print("Invalid income")
+
+elif income <= 300000:
+    tax = 0
+
+elif income <= 700000:
+    tax = (income - 300000) * 0.05
+
+elif income <= 1000000:
+    tax = (400000 * 0.05) + (income - 700000) * 0.10
+
+else:
+    tax = (400000 * 0.05) + (300000 * 0.10) + (income - 1000000) * 0.15
+
+if income >= 0:
+    print("Income Tax:", tax)

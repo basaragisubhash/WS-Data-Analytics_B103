@@ -1,0 +1,4 @@
+data = [10, 10.5, "Python", True, 5+3j, None]
+
+for value in data:
+    print(value, "=", type(value))
