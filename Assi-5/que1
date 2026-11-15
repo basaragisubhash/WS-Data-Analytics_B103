@@ -1,0 +1,17 @@
+arr = [10, 20, 30, 40, 30, 20]
+
+largest = float('-inf')
+second = float('-inf')
+
+for num in arr:
+    if num > largest:
+        second = largest
+        largest = num
+
+    elif num > second and num != largest:
+        second = num
+
+if second == float('-inf'):
+    print("Second largest not found")
+else:
+    print("Second largest:", second)

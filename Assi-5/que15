@@ -1,0 +1,16 @@
+arr = [3, 2, 1, 5, 6, 4]
+k = 2
+
+for i in range(k):
+    largest = arr[0]
+    position = 0
+
+    for j in range(len(arr)):
+        if arr[j] > largest:
+            largest = arr[j]
+            position = j
+
+    if i == k - 1:
+        print("Kth largest:", largest)
+
+    arr[position] = float('-inf')

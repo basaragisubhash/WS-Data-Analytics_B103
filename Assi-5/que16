@@ -1,0 +1,32 @@
+text = "{[()]}"
+
+stack = []
+
+pairs = {
+    ')': '(',
+    '}': '{',
+    ']': '['
+}
+
+for char in text:
+
+    if char in "({[":
+        stack.append(char)
+
+    elif char in ")}]":
+
+        if len(stack) == 0:
+            print("Not Balanced")
+            break
+
+        if stack[-1] == pairs[char]:
+            stack.pop()
+        else:
+            print("Not Balanced")
+            break
+
+else:
+    if len(stack) == 0:
+        print("Balanced")
+    else:
+        print("Not Balanced")

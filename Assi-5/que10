@@ -1,0 +1,16 @@
+arr1 = [1, 2, 2, 3, 4]
+arr2 = [2, 2, 3, 5]
+
+count = {}
+
+for num in arr1:
+    count[num] = count.get(num, 0) + 1
+
+result = []
+
+for num in arr2:
+    if count.get(num, 0) > 0:
+        result.append(num)
+        count[num] -= 1
+
+print(result)

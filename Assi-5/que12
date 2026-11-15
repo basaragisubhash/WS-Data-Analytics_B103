@@ -1,0 +1,20 @@
+text = "abcabcbb"
+
+start = 0
+longest = 0
+seen = {}
+
+for i in range(len(text)):
+    char = text[i]
+
+    if char in seen and seen[char] >= start:
+        start = seen[char] + 1
+
+    seen[char] = i
+
+    length = i - start + 1
+
+    if length > longest:
+        longest = length
+
+print("Longest substring length:", longest)
