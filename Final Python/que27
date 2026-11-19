@@ -1,0 +1,5 @@
+data = {'a': 40, 'b': 10, 'c': 30, 'd': 20}
+
+result = dict(sorted(data.items(), key=lambda x: x[1]))
+
+print(result)

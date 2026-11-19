@@ -1,0 +1,16 @@
+numbers = [2, 3, 10, 6, 4, 8, 1]
+
+minimum = numbers[0]
+max_diff = numbers[1] - numbers[0]
+
+for i in range(1, len(numbers)):
+
+    diff = numbers[i] - minimum
+
+    if diff > max_diff:
+        max_diff = diff
+
+    if numbers[i] < minimum:
+        minimum = numbers[i]
+
+print("Maximum difference:", max_diff)

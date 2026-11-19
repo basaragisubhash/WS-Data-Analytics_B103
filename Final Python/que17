@@ -1,0 +1,15 @@
+numbers = [10, 20, 5, 30, 25]
+
+largest = numbers[0]
+second = None
+
+for num in numbers:
+    if num > largest:
+        second = largest
+        largest = num
+
+    elif num != largest:
+        if second == None or num > second:
+            second = num
+
+print("Second largest:", second)

@@ -1,0 +1,14 @@
+students = [
+    {'name': 'Rahul', 'marks': 85},
+    {'name': 'Amit', 'marks': 90},
+    {'name': 'Sneha', 'marks': 95}
+]
+
+highest = students[0]
+
+for student in students:
+    if student['marks'] > highest['marks']:
+        highest = student
+
+print("Top Student:", highest['name'])
+print("Highest Marks:", highest['marks'])

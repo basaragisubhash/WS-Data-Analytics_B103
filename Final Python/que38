@@ -1,0 +1,23 @@
+
+name = input("Enter Employee Name: ")
+emp_id = int(input("Enter Employee ID: "))
+basic = float(input("Enter Basic Salary: "))
+
+hra = basic * 20 / 100
+da = basic * 10 / 100
+
+gross = basic + hra + da
+
+deduction = gross * 5 / 100
+
+net = gross - deduction
+
+print("\n--- Employee Salary Details ---")
+print("Employee Name:", name)
+print("Employee ID:", emp_id)
+print("Basic Salary:", basic)
+print("HRA:", hra)
+print("DA:", da)
+print("Gross Salary:", gross)
+print("Deduction:", deduction)
+print("Net Salary:", net)

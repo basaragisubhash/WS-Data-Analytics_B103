@@ -1,0 +1,84 @@
+
+tasks = []
+
+while True:
+    print("\n--- Task Management System ---")
+    print("1. Add Task")
+    print("2. View All Tasks")
+    print("3. Update Task")
+    print("4. Delete Task")
+    print("5. Mark Completed")
+    print("6. Completed Tasks")
+    print("7. Pending Tasks")
+    print("8. Exit")
+
+    choice = int(input("Enter your choice: "))
+
+    if choice == 1:
+        task_id = int(input("Enter Task ID: "))
+        name = input("Enter Task Name: ")
+
+        task = {
+            "id": task_id,
+            "name": name,
+            "completed": False
+        }
+
+        tasks.append(task)
+        print("Task added successfully!")
+
+    elif choice == 2:
+        for task in tasks:
+            print(task)
+
+    elif choice == 3:
+        task_id = int(input("Enter Task ID: "))
+
+        for task in tasks:
+            if task["id"] == task_id:
+                task["name"] = input("Enter New Task Name: ")
+                print("Task updated!")
+                break
+        else:
+            print("Task not found")
+
+    elif choice == 4:
+        task_id = int(input("Enter Task ID: "))
+
+        for task in tasks:
+            if task["id"] == task_id:
+                tasks.remove(task)
+                print("Task deleted!")
+                break
+        else:
+            print("Task not found")
+
+    elif choice == 5:
+        task_id = int(input("Enter Task ID: "))
+
+        for task in tasks:
+            if task["id"] == task_id:
+                task["completed"] = True
+                print("Task completed!")
+                break
+        else:
+            print("Task not found")
+
+    elif choice == 6:
+        print("--- Completed Tasks ---")
+        for task in tasks:
+            if task["completed"] == True:
+                print(task)
+
+    elif choice == 7:
+        print("--- Pending Tasks ---")
+        for task in tasks:
+            if task["completed"] == False:
+                print(task)
+
+    elif choice == 8:
+        print("Thank you!")
+        break
+
+    else:
+        print("Invalid choice")

@@ -1,0 +1,14 @@
+text = input("Enter a string: ")
+
+for ch in text:
+    count = 0
+
+    for i in text:
+        if ch == i:
+            count = count + 1
+
+    if count == 1:
+        print("First non-repeating character:", ch)
+        break
+else:
+    print("No non-repeating character")

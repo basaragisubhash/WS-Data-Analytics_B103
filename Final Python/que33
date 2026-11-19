@@ -1,0 +1,18 @@
+def my_map(func, numbers):
+    result = []
+
+    for num in numbers:
+        result.append(func(num))
+
+    return result
+
+
+def square(n):
+    return n * n
+
+
+numbers = [1, 2, 3, 4, 5]
+
+answer = my_map(square, numbers)
+
+print(answer)

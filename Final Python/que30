@@ -1,0 +1,9 @@
+keys = ['name', 'age', 'city']
+values = ['Rahul', 21, 'Pune']
+
+result = {}
+
+for i in range(len(keys)):
+    result[keys[i]] = values[i]
+
+print(result)
